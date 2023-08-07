@@ -7,7 +7,7 @@ command: >-
 inputs:
   training_data:
     type: uri_folder 
-    path: azureml:diabetes-data:@latest
+    path: azureml:diabetes-data:2
   reg_rate: 0.01
 environment: azureml:my-demo-env@latest
 compute: azureml:myCluster
