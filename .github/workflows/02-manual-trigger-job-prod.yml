@@ -5,7 +5,8 @@ on:
 
 jobs:
   train:
-    runs-on: myProd
+    runs-on: ubuntu-latest
+    environment: myProd
     steps:
      
     - name: Check out repo
