@@ -7,6 +7,10 @@ jobs:
   train-model:
     runs-on: ubuntu-latest
     steps:
-    - name: Trigger Azure Machine Learning job
+    - name: Lint with flake8
+        run: |
+          flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 src --count --max-complexity=10 --max-line-length=79 --statistics
+      - name: Trigger Azure Machine Learning job
       run: |
         echo "Will add code checks here in next challenge"
