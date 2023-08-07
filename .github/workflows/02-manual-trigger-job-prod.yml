@@ -17,7 +17,7 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Trigger Azure Machine Learning job
-      run:  az ml job create --file "src/job - dev.yml" --workspace-name ml-demo-ws --resource-group ML-Demo
+      run:  az ml job create --file "src/job - dev.yml" --workspace-name ml-demo-ws --resource-group ML-Demo --stream
   production:
     needs: development
     runs-on: ubuntu-latest
