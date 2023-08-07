@@ -5,7 +5,7 @@ on:
 
 jobs:
   train:
-    runs-on: myDev
+    runs-on: myProd
     steps:
      
     - name: Check out repo
